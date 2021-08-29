@@ -19,8 +19,8 @@ async function getAPI(url) {
 async function imprimir(perfil) {    
     const {avatar_url, name, company, bio, followers, following, public_repos, login} = perfil;    
     const repos = await getAPI(urlUser+login+'/repos');    
-    console.log(perfil);
-    console.log(repos);
+    // console.log(perfil);
+    // console.log(repos);
     if (document.querySelector('.card')) document.querySelector('.card').remove();
     const main = document.querySelector('main');
     const divCard = document.createElement('div');    
@@ -37,7 +37,7 @@ async function imprimir(perfil) {
                 <small>${company}</small>
                 <p>${bio}</p>
             </div>
-            <div class="iconos">
+            <div class="iconos">                
                 <div><i class="fas fa-heart"></i>${followers}</div>
                 <div><i class="fas fa-user"></i>${following}</div>
                 <div><i class="fas fa-code"></i>${public_repos}</div>
@@ -47,6 +47,7 @@ async function imprimir(perfil) {
     `;
     const divRepos = document.createElement('div');
     divRepos.classList.add('repos');    
+    divRepos.innerHTML += '<small id="repo">&#60; repos &#62;</small>';
     repos.slice(0,9).forEach( e => {        
         divRepos.innerHTML += `
             <a href="${e.html_url}" target="_blank">${e.name}</a>
