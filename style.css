@@ -69,6 +69,7 @@ small#repo {
 }
 
 .iconos {
+    margin-bottom: 2.5rem;
     font-size: 0.8rem ;
     display: flex;
     justify-content: space-between;
@@ -111,7 +112,7 @@ small#repo {
     background-color: #574b9b ;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 600px) {
     .perfil {
         display: flex;
         flex-wrap: wrap;
@@ -123,4 +124,5 @@ small#repo {
     .card {
         padding: 1.7rem 1.7rem;
     }
-}
+
+
