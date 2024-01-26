@@ -4,4 +4,4 @@
 - search for user
 - get and show data
 
-Watch it in Action [here](https://dgsergio.github.io/GitHubProfiles/)
+Watch it in Action [here](https://dgsergio.github.io/github-profiles/)
